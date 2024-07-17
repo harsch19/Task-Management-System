@@ -1,0 +1,14 @@
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
