@@ -1,24 +1,36 @@
 using TaskManager;
+using System;
+using System.Linq;
 
 namespace List
 {
     public class ListManager : ITaskManager
     {
-        private ListDB tasks;
+        private readonly List<Task> tasks;
 
         public ListManager()
         {
-            tasks = new ListDB();
+            var db = new ListDB();
+            tasks = db.GetListDBObj();
         }
 
         public bool AddTask(Task task)
         {
-            tasks.Tasks.Add(task);
-            return true;
+            if (tasks.All(t => t.ID != task.ID))
+            {
+                tasks.Add(task);
+                return true;
+            }
+            return false;
         }
+
         public void DisplayTasks()
         {
-            foreach (var task in tasks.Tasks)
+            if (tasks.Count == 0){
+                Console.WriteLine("No tasks found");
+                return;
+            }
+            foreach (var task in tasks)
             {
                 Console.WriteLine(task);
             }
@@ -26,7 +38,7 @@ namespace List
 
         public Task SearchTask(int id)
         {
-            return tasks.Tasks.FirstOrDefault(t => t.ID == id);
+            return tasks.FirstOrDefault(t => t.ID == id);
         }
 
         public Task UpdateTask(int id, string title, string desc, string status)
@@ -47,7 +59,7 @@ namespace List
             var task = SearchTask(id);
             if (task != null)
             {
-                tasks.Tasks.Remove(task);    
+                tasks.Remove(task);
                 return true;
             }
             return false;

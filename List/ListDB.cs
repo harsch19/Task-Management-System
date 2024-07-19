@@ -4,11 +4,16 @@ namespace List
 {
     public class ListDB
     {
-        public List<Task> Tasks { get; set; }
+        private List<Task> tasks;
 
         public ListDB()
         {
-            Tasks = new List<Task>();
+            tasks = new List<Task>();
+        }
+
+        public List<Task> GetListDBObj()
+        {
+            return tasks;
         }
     }
 }

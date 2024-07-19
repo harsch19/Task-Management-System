@@ -10,8 +10,7 @@ public class Program
     {
         ITaskManager taskManager = null;
         
-        while (true)
-        {
+        while (true) {
             Console.WriteLine("Select Data Structure:");
             Console.WriteLine("1. List");
             Console.WriteLine("2. Dictionary");
@@ -19,8 +18,7 @@ public class Program
             Console.WriteLine("4. Tree");
             int dataStructureChoice = Convert.ToInt32(Console.ReadLine());
 
-            switch (dataStructureChoice)
-            {
+            switch (dataStructureChoice) {
                 case 1:
                     taskManager = new ListManager();
                     break;
@@ -28,18 +26,17 @@ public class Program
                     taskManager = new DictionaryManager();
                     break;
                 case 3:
-                    taskManager = new LinkedListManager(new LinkedListDB());
+                    taskManager = new LinkedListManager();
                     break;
                 case 4:
-                    taskManager = new TreeManager(new TreeDB());
+                    taskManager = new TreeManager();
                     break;
                 default:
                     Console.WriteLine("Invalid data structure choice. Please try again.");
                     continue;
             }
 
-            while (true)
-            {
+            while (true) {
                 Console.WriteLine("\n\n1. Add task");
                 Console.WriteLine("2. View all tasks");
                 Console.WriteLine("3. Find task by ID");
@@ -48,8 +45,7 @@ public class Program
                 Console.WriteLine("6. Exit");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
-                switch (choice)
-                {
+                switch (choice) {
                     case 1:
                         TaskManagerActions.AddTask(taskManager);
                         break;

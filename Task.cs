@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-
 public class Task
 {
     public int ID { get; set; }
@@ -11,16 +5,14 @@ public class Task
     public string Desc { get; set; }
     public string Status { get; set; }
 
-    public Task(int id, string title, string desc, string status)
-    {
+    public Task(int id, string title, string desc, string status) {
         ID = id;
         Title = title;
         Desc = desc;
         Status = status;
     }
 
-    public override string ToString()
-    {
+    public override string ToString() {
         return $"ID: {ID}, Title: {Title}, Description: {Desc}, Status: {Status}";
     }
 }

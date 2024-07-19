@@ -1,39 +1,61 @@
 using TaskManager;
-
 namespace Dictionary
 {
     public class DictionaryManager : ITaskManager
     {
-        private readonly DictionaryDB db;
+        private readonly Dictionary<int, Task> tasks;
 
         public DictionaryManager()
         {
-            db = new DictionaryDB();
+            var db = new DictionaryDB();
+            tasks = db.GetDictionaryDBObj();
         }
 
         public bool AddTask(Task task)
         {
-            return db.AddTask(task);
+            if (!tasks.ContainsKey(task.ID))
+            {
+                tasks.Add(task.ID, task);
+                return true;
+            }
+            return false;
         }
 
         public void DisplayTasks()
         {
-            db.DisplayTasks();
+            if (tasks.Count == 0)
+            {
+                Console.WriteLine("No tasks found");
+                return;
+            }
+            foreach (var task in tasks.Values)
+            {
+                Console.WriteLine(task);
+            }
         }
 
         public Task SearchTask(int id)
         {
-            return db.SearchTask(id);
+            tasks.TryGetValue(id, out var task);
+            return task;
         }
 
         public Task UpdateTask(int id, string title, string desc, string status)
         {
-            return db.UpdateTask(id, title, desc, status);
+            var task = SearchTask(id);
+            if (task != null)
+            {
+                task.Title = title;
+                task.Desc = desc;
+                task.Status = status;
+                return task;
+            }
+            return null;
         }
 
         public bool DeleteTask(int id)
         {
-            return db.DeleteTask(id);
+            return tasks.Remove(id);
         }
     }
 }
