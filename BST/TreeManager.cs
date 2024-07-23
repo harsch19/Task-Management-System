@@ -5,7 +5,12 @@ namespace BST
 {
     public class TreeManager : ITaskManager
     {
-        private TreeDB db = new TreeDB();
+        private readonly ITreeDB db;
+
+        public TreeManager(ITreeDB db)
+        {
+            this.db = db;
+        }
 
         public bool AddTask(Task task)
         {

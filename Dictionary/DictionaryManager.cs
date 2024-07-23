@@ -1,13 +1,15 @@
 using TaskManager;
+
 namespace Dictionary
 {
     public class DictionaryManager : ITaskManager
     {
+        private readonly IDictionaryDB db;
         private readonly Dictionary<int, Task> tasks;
 
-        public DictionaryManager()
+        public DictionaryManager(IDictionaryDB db)
         {
-            var db = new DictionaryDB();
+            this.db = db;
             tasks = db.GetDictionaryDBObj();
         }
 

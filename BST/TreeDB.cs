@@ -1,6 +1,6 @@
 namespace BST
 {
-    public class TreeDB
+    public class TreeDB : ITreeDB
     {
         private TreeNode Root { get; set; }
 

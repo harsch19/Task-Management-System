@@ -4,13 +4,19 @@ namespace LinkedList
 {
     public class LinkedListManager : ITaskManager
     {
-        private LinkedListDB db = new LinkedListDB();
+        private readonly ILinkedListDB db;
+
+        public LinkedListManager(ILinkedListDB db)
+        {
+            this.db = db;
+        }
 
         public bool AddTask(Task task)
         {
-            Node newNode = db.GetLinkedListDBObj(task);
+            Node newNode = db.GetLinkedListDBObj(task);                     
             Node current = db.GetLinkedListDBObj();
             if (current == null) {
+                db.SetFirstNode(newNode);
                 return true;
             }
 
@@ -77,7 +83,7 @@ namespace LinkedList
             Node first = db.GetLinkedListDBObj();
 
             if (first.Next == null || first.Data.ID == id) {
-                db.DeleteFirst();
+                db.SetFirstNode(first.Next);
                 return true;
             }
 

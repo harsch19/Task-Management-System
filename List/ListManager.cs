@@ -1,16 +1,15 @@
 using TaskManager;
-using System;
-using System.Linq;
 
 namespace List
 {
     public class ListManager : ITaskManager
     {
         private readonly List<Task> tasks;
+        private readonly IListDB db;
 
-        public ListManager()
+        public ListManager(IListDB db)
         {
-            var db = new ListDB();
+            this.db = db;
             tasks = db.GetListDBObj();
         }
 

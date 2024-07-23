@@ -1,6 +1,6 @@
 namespace LinkedList
 {
-    public class LinkedListDB
+    public class LinkedListDB : ILinkedListDB
     {
         private Node First { get; set; }
 
@@ -15,8 +15,8 @@ namespace LinkedList
             return new Node(task);
         }
 
-        public void DeleteFirst() {
-            First = First.Next;
+        public void SetFirstNode(Node node) {
+            First = node;
         }
     }
 }

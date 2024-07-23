@@ -12,4 +12,3 @@ C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management S
 C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.pdb
 C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
 C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
-C:\Users\HarschJadhav\Corporate Data\OneDrive - TOR.AI LIMITED\Task Management System\TaskManager\obj\Debug\net8.0\TaskManager.sourcelink.json

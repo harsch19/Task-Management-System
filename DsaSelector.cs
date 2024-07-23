@@ -1,12 +1,12 @@
+using LinkedList;
 using List;
 using Dictionary;
-using LinkedList;
 using BST;
 using TaskManager;
 
 public class DsaSelector
-{
-    public ITaskManager SelectDataStructure()
+{   
+    public static ITaskManager SelectDataStructure()
     {
         Console.WriteLine("Select Data Structure:");
         Console.WriteLine("1. List");
@@ -19,13 +19,21 @@ public class DsaSelector
         switch (dataStructureChoice)
         {
             case 1:
-                return new ListManager();
+                IListDB listdb = new ListDB();
+                ITaskManager listManager = new ListManager(listdb);
+                return listManager;
             case 2:
-                return new DictionaryManager();
+                IDictionaryDB dictionaryDB = new DictionaryDB();
+                ITaskManager dictionaryManager = new DictionaryManager(dictionaryDB);
+                return dictionaryManager;
             case 3:
-                return new LinkedListManager();
+                ILinkedListDB linkedListDB = new LinkedListDB();
+                ITaskManager linkedListManager = new LinkedListManager(linkedListDB);
+                return linkedListManager;
             case 4:
-                return new TreeManager();
+                ITreeDB treeDB = new TreeDB();
+                ITaskManager treeManager = new TreeManager(treeDB);
+                return treeManager;
             default:
                 Console.WriteLine("Invalid data structure choice. Please try again.");
                 return null;

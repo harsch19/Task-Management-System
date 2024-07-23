@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Dictionary
 {
-    public class DictionaryDB
+    public class DictionaryDB : IDictionaryDB
     {
         private Dictionary<int, Task> tasks;
 

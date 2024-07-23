@@ -2,7 +2,7 @@ namespace TaskManager
 {
     public class TaskActionHandler
     {
-        public void HandleActions(ITaskManager taskManager)
+        public static void HandleActions(ITaskManager taskManager)
         {
             while (true)
             {

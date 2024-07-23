@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-
 namespace List
 {
-    public class ListDB
+    public class ListDB : IListDB
     {
         private List<Task> tasks;
 
